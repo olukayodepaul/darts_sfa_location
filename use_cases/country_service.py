@@ -1,0 +1,3 @@
+
+class CountryService:
+    pass
