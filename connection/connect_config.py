@@ -13,4 +13,8 @@ config = dict({
     "jwt":{
         "secret_key" :os.getenv("JWT_SECRET_KEY"),
         "algorithm": os.getenv("JWT_ALGORITHM")
-}})
+        },
+    "redis":{
+        "host" :os.getenv("REDIS_HOST"),
+        "port": os.getenv("REDIS_PORT")
+    }})

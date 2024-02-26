@@ -14,6 +14,8 @@ services:
       - POSTGRES_HOST_NAME=postgres
       - JWT_SECRET_KEY=09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7
       - JWT_ALGORITHM=HS256
+      - REDIS_HOST=redis
+      - REDIS_PORT=6310
     command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8085
     volumes:
       - ./app:/app/app

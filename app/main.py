@@ -2,11 +2,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api import api_service 
 from connection import posgresql as models
-from connection.test_connection import test_connection
-from connection import connect_config
+# from connection.test_connection import test_connection
+# from connection import connect_config
 
 connection = models.Base.metadata.create_all(bind=models.engine)
-test_connection()
+# test_connection()
 
 
 app = FastAPI()
@@ -22,3 +22,4 @@ app.add_middleware(
 )
 
 app.include_router(api_service.router, prefix="/location", tags=["location"])
+

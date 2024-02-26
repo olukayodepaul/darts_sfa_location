@@ -7,29 +7,29 @@ services:
       dockerfile: Dockerfile 
     container_name: location_micro_service
     ports:
-      - "8085:8085"
+      - 8085:8085
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin123
       - POSTGRES_DB=location_service
-      - POSTGRES_PORT=5432  # Use the default PostgreSQL port inside the container
-      - POSTGRES_HOST_NAME=postgres # Use the service name as the hostname
-      - JWT_SECRET_KEY = 09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7
-      - JWT_ALGORITHM = HS256
+      - POSTGRES_PORT=5432 
+      - POSTGRES_HOST_NAME=postgres
+      - JWT_SECRET_KEY=09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7
+      - JWT_ALGORITHM=HS256
+      - REDIS_HOST=redis_db
+      - REDIS_PORT=6379
     command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8085
     volumes:
       - ./app:/app/app
-  postgres:
-    image: postgres:latest
-    container_name: postgres_container
+  redis_db:
+    image: redis:latest
+    container_name: redis_container
     ports:
-      - "5433:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=admin123
-      - POSTGRES_DB=location_service
+      - 6379:6379  # Port mapping
     volumes:
-      - postgres_data:/var/lib/postgresql/data  # Persist data to the host machine
+      - redis_data:/data
+
 
 volumes:
   postgres_data:
+  redis_data:
