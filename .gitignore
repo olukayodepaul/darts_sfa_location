@@ -2,3 +2,6 @@ venv
 .env
 .github/workflows/
 __pycache__
+fastapi-compose.yml
+postgresql-compose.yml
+docker-compose.yml
