@@ -7,15 +7,15 @@ services:
     ports:
       - "8085:8085"
     environment:
-      - POSTGRES_USER={{}}
-      - POSTGRES_PASSWORD={{}}
-      - POSTGRES_DB={{}}
-      - POSTGRES_PORT={{}}
-      - POSTGRES_HOST_NAME={{}}
-      - JWT_SECRET_KEY={{}}
-      - JWT_ALGORITHM={{}}
-      - REDIS_HOST={{}}
-      - REDIS_PORT={{}}
+      - POSTGRES_USER={{ postgres_user }}
+      - POSTGRES_PASSWORD={{ postgres_password }}
+      - POSTGRES_DB={{ postgres_db }}
+      - POSTGRES_PORT={{ postgres_port }}
+      - POSTGRES_HOST_NAME={{ postgres_host_name }}
+      - JWT_SECRET_KEY={{ jwt_secret_key }}
+      - JWT_ALGORITHM={{ jwt_algorithm }}
+      - REDIS_HOST={{ redis_host }}
+      - REDIS_PORT={{ redis_port }}
     depends_on: 
       - postgres
       - redis_db
@@ -29,9 +29,9 @@ services:
     ports:
       - "5433:5432"
     environment:
-      - POSTGRES_USER={{}}
-      - POSTGRES_PASSWORD={{}}
-      - POSTGRES_DB={{}}
+      - POSTGRES_USER={{ postgres_user }}
+      - POSTGRES_PASSWORD={{ postgres_password }}
+      - POSTGRES_DB={{ postgres_db }}
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
