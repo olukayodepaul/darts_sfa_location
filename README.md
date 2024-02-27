@@ -7,6 +7,7 @@
 
 
 ```yaml {.code-highlight}
+
 dart_spatial_sfa_company_service
         api\
             service_api.py
@@ -22,20 +23,26 @@ dart_spatial_sfa_company_service
             redis_model.py
             sqlalchemy_model.py
         di\
-            model.py
-    kafka\
-    venv\
+            app_di.py
+        oauth\
+            oauth2
+        use_cases\
+            continent_service.py
+            country_service.py
+            local_govt_service.py
+            state_service.py
     .dockerignore
     .env
     .gitignore
-    configuration.py
-    docker-compose.yml
+    constants.py
+    docker-compose.yml.j2
     dockerfile
-    kafka_producer.py
-    README.nd
+    README.md
     requirements.txt
-    SQL.sql
-    util.py
+    secrets.yml
+    table.sql
+
+
 ```
 🚀
 Run docker compose for redis 
