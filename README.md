@@ -8,7 +8,7 @@
 
 ```yaml {.code-highlight}
 
-dart_spatial_sfa_company_service
+darts_location_service
         api\
             service_api.py
         app\
