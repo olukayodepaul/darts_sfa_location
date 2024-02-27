@@ -8,27 +8,21 @@
 
 ```yaml {.code-highlight}
 dart_spatial_sfa_company_service
-    app\
         api\
             service_api.py
-        apps\
+        app\
             main.py
-        authentication\
-            oauth2.py
-        data\
-            model.py
-        db\
-            database.py
-            schemas.py
+        connection/
+            connect_config.py
+            posgresql.py
+            redis_connection.py
+            test_connection.py
+        data_model\
+            http_response.py
+            redis_model.py
+            sqlalchemy_model.py
         di\
-            dependencies.py
-        redis_connect\
-            redis.py
-        services\
-            add_company_service.py
-            delete_company_service.py
-            get_company_service.py
-            update_company_service.py
+            model.py
     kafka\
     venv\
     .dockerignore
@@ -83,7 +77,23 @@ feature include:
 pip install ansible
 ```
 
-encrypt a yaml file (secrets.yml)
+encrypt a yaml file (secrets.yml) with ansible
 ```
 ansible-vault encrypt secrets.yml
 ```
+
+view the content of the encrypted file
+```
+ansible-vault view  secrets.yml
+```
+
+edit the  content of the encrypted file
+```
+ansible-vault edit  secrets.yml
+```
+
+decrypt the encrypted file
+```
+ansible-vault decrypt secrets.yml
+```
+
