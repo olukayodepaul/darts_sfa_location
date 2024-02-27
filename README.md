@@ -76,3 +76,14 @@ feature include:
 - Refactored code for readability and maintainability
 - add redis to cache data
 - README file for details
+
+### using Ansible for securing the container sensitive data
+>install Ansible
+```
+pip install ansible
+```
+
+encrypt a yaml file (secrets.yml)
+```
+ansible-vault encrypt secrets.yml
+```
