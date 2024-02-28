@@ -64,19 +64,17 @@ start fast Api without docker for a testing purpose
 
 
 ### feat: Completed company microservice
-This commit marks the completion of the company microservice. 
+This commit marks the completion of the location microservice. 
 
 feature include:
 
-- Implemented CRUD operations for managing companies
-- Added endpoints for adding, retrieving, updating, and deleting companies
+- Implemented CRUD operations for managing user location
+- Added endpoints for retrieving continent, country, state and local goverment location
 - Integrated JWT-based authentication and authorization middleware
 - Implemented input validation and error handling
 - Documented API endpoints using OpenAPI specifications
-- Optimized database queries
-- Refactored code for readability and maintainability
-- add redis to cache data
-- README file for details
+- Optimized database with sqlalchemy
+- add redis to cache data 
 
 ### using Ansible for securing the container sensitive data
 >install Ansible
