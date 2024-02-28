@@ -63,7 +63,7 @@ start fast Api without docker for a testing purpose
 - fastApi port number 8080
 
 
-### feat: Completed company microservice
+### feat: Completed Location microservice
 This commit marks the completion of the location microservice. 
 
 feature include:
