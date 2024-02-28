@@ -104,3 +104,11 @@ decrypt the encrypted file
 ansible-vault decrypt secrets.yml
 ```
 
+
+
+Your docker-compose.yml.j2 file is a Jinja2 
+template used to generate a Docker Compose 
+configuration file dynamically. It appears to
+be configured to inject environment variables 
+into the Docker containers defined within the 
+services section.
