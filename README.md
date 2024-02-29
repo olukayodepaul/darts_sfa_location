@@ -74,7 +74,8 @@ feature include:
 - Implemented input validation and error handling
 - Documented API endpoints using OpenAPI specifications
 - Optimized database with sqlalchemy
-- add redis to cache data 
+- add redis to cache data
+- postgreSQL
 
 ### using Ansible for securing the container sensitive data
 >install Ansible
