@@ -77,6 +77,7 @@ feature include:
 - Optimized database with sqlalchemy
 - add redis to cache data
 - postgreSQL
+- add nginx for load balancing.
 
 ### using Ansible for securing the container sensitive data
 >install Ansible
