@@ -104,6 +104,16 @@ decrypt the encrypted file
 ansible-vault decrypt secrets.yml
 ```
 
+nginx configuration file location
+> /etc/nginx/nginx.conf
+
+```
+nano /etc/nginx/nginx.conf
+```
+or 
+```
+docker exec -it your_container_id /bin/bash
+```
 
 
 Your docker-compose.yml.j2 file is a Jinja2 
