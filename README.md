@@ -68,6 +68,7 @@ This commit marks the completion of the location microservice.
 
 feature include:
 
+- fastApi restFul Api
 - Implemented CRUD operations for managing user location
 - Added endpoints for retrieving continent, country, state and local goverment location
 - Integrated JWT-based authentication and authorization middleware
