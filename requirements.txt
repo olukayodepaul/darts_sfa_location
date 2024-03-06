@@ -1,5 +1,5 @@
 ## this is the original
-fastapi[all]
+# fastapi[all]
 psycopg2-binary
 pydantic
 redis
