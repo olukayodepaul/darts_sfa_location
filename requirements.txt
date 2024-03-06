@@ -6,6 +6,10 @@ redis
 python-jose[cryptography]
 sqlalchemy
 bcrypt
+starlette
+
+
+
 # aniso8601==7.0.0
 # annotated-types==0.6.0
 # ansible==9.2.0
