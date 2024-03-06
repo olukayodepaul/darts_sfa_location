@@ -1,13 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api import api_service 
+from api import api_service, graphql_service
 from connection import posgresql as models
-# from connection.test_connection import test_connection
-# from connection import connect_config
 
 connection = models.Base.metadata.create_all(bind=models.engine)
-# test_connection()
-
 
 app = FastAPI()
 
@@ -21,5 +17,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(api_service.router, prefix="/location", tags=["location"])
 
+app.include_router(api_service.router, prefix="/location", tags=["location"])
+app.include_router(graphql_service.router, prefix="/location", tags=["location"]) 
