@@ -6,8 +6,7 @@ redis
 python-jose[cryptography]
 sqlalchemy
 bcrypt
-starlette
-
+starlette==0.14.2
 
 
 # aniso8601==7.0.0
