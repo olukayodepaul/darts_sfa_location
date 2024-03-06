@@ -18,10 +18,13 @@ async def all_continent(injection: ContinentService = Depends(continent_service)
     return injection.all_continent()
 
 
-@router.get("/continent/{id}", status_code=status.HTTP_200_OK)
-async def get_all_continent(id: int, injection: ContinentService = Depends(continent_service)):
+@router.get("/continent/{continent_id}", status_code=status.HTTP_200_OK)
+async def get_all_continent(
+    continent_id: int,
+    injection: ContinentService = Depends(continent_service)
+):
     """Get continent by ID."""
-    return injection.get_continent(id)
+    return injection.get_continent(continent_id)
 
 
 @router.get("/country", status_code=status.HTTP_200_OK)
@@ -31,7 +34,10 @@ async def all_country(injection: CountryService = Depends(country_service)):
 
 
 @router.get("/country/{continent_id}", status_code=status.HTTP_200_OK)
-async def get_all_country(continent_id: int, injection: CountryService = Depends(country_service)):
+async def get_all_country(
+    continent_id: int,
+    injection: CountryService = Depends(country_service)
+):
     """Get countries by continent ID."""
     return injection.get_country(continent_id)
 
@@ -43,12 +49,18 @@ async def is_all_state(injection: StateService = Depends(state_service)):
 
 
 @router.get("/state/{country_id}", status_code=status.HTTP_200_OK)
-async def is_first_state(country_id: int, injection: StateService = Depends(state_service)):
+async def is_first_state(
+    country_id: int,
+    injection: StateService = Depends(state_service)
+):
     """Get first state by country ID."""
     return injection.first_state(country_id)
 
 
 @router.get("/localgovt/{state_id}", status_code=status.HTTP_200_OK)
-async def all_local_govt(state_id: int, injection: LocalGovtService = Depends(local_govt_service)):
+async def all_local_govt(
+    state_id: int,
+    injection: LocalGovtService = Depends(local_govt_service)
+):
     """Get all local governments by state ID."""
     return injection.get_local_govt(state_id)
